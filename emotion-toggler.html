@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emotion-Toggler</title>
     <style>
-        body{
-            background-image: linear-gradient( 90.1deg,  rgba(84,212,228,1) 0.2%, rgba(68,36,164,1) 99.9% );
+        body {
+            background-image: linear-gradient(90.1deg, rgba(84, 212, 228, 1) 0.2%, rgba(68, 36, 164, 1) 99.9%);
         }
-        .title{
+
+        .title {
             text-align: center;
             font-size: 60px;
             color: #ffff;
         }
-        .container{
+
+        .container {
             background-color: #fff;
             width: 300px;
             display: flex;
@@ -24,40 +27,50 @@
             border: none;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
-        .face{
+
+        .face {
             height: 300px;
         }
-        .btn-container{
+
+        .btn-container {
             display: flex;
             justify-content: center;
             margin: 0 auto;
             padding: 20px;
         }
-        .all-btn{
+
+        .all-btn {
             margin: 0 10px;
             font-size: 20px;
             padding: 5px 20px;
             color: #fff;
             background-color: black;
             border-radius: 40px;
-            border: none;   
+            border: none;
         }
-
     </style>
 </head>
+
 <body>
     <h1 class="title">Emotion Toggler</h1>
 
     <div class="container">
-        <img src="./img/smaile.png" alt="smaile-face" class="face"/>
+        <img src="./img/love.png" alt="love" class="face" id="face" />
     </div>
 
     <div class="btn-container">
-        <button class="all-btn">Angry</button>
-        <button class="all-btn">Cool</button>
-        <button class="all-btn">Happy</button>
-        <button class="all-btn">Sad</button>
-        <button class="all-btn">Smaile</button>
+        <button class="all-btn" onclick="toggle('1')">Angry</button>
+        <button class="all-btn" onclick="toggle('2')">Cool</button>
+        <button class="all-btn" onclick="toggle('3')">Happy</button>
+        <button class="all-btn" onclick="toggle('4')">Sad</button>
+        <button class="all-btn" onclick="toggle('5')">Smaile</button>
     </div>
+
+    <script>
+        function toggle(state) {
+            document.getElementById('face').src = `./img/face-${state}.png`;
+        }
+    </script>
 </body>
+
 </html>
