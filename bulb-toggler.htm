@@ -15,13 +15,64 @@
         .title {
             text-align: center;
             font-size: 50px;
-
+        }
+        .bulb-container{
+            background-color: #fff;
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .bulb-img{
+            height: 300px;
+        }
+        .btn-container{
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            padding:10px ;
+        }
+        .btn-toggel{
+            color: white;
+            padding: 5px 20px;
+            font-size: 20px;
+            margin: 0 20px;
+            border-radius: 40px;
+            border: none;
+        }
+        .btn-on{
+            background-color: #14a305;
+        }
+        .btn-off{
+            background-color: #f21212;
+        }
+        .btn-toggel:hover{
+            box-shadow: 0 0 5px 5px  rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
 
 <body>
     <h1 class="title">Bulb-Toggler</h1>
+
+    <div class="bulb-container">
+        <img src="bulb-off.png" alt="bulb" class="bulb-img" id="bulb"/>
+    </div>
+
+    <div class="btn-container">
+        <button class="btn-toggel btn-on" onclick="bulbToggle('On')">On</button>
+        <button class="btn-toggel btn-off" onclick="bulbToggle('Off')">Off</button>
+    </div>
+
+    <script>
+        function bulbToggle(state)
+        {
+            document.getElementById('bulb').src=`bulb-${state}.png`;
+        }
+    </script>
 </body>
 
 </html>
