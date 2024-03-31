@@ -38,7 +38,7 @@
         .btn-toggel{
             color: white;
             padding: 5px 20px;
-            font-size: 20px;
+            font-size: 25px;
             margin: 0 20px;
             border-radius: 40px;
             border: none;
@@ -52,11 +52,26 @@
         .btn-toggel:hover{
             box-shadow: 0 0 5px 5px  rgba(0, 0, 0, 0.2);
         }
+        .emotion-toggler{
+            text-decoration: none;
+            font-size: 20px;
+            text-align: end;
+        }
+        @media screen and (max-width:360px) {
+            .bulb-container{
+                width: 80%;
+            }
+            .emotion-toggler{
+                text-align: center;
+            }
+        }
     </style>
 </head>
 
 <body>
     <h1 class="title">Bulb-Toggler</h1>
+    
+   
 
     <div class="bulb-container">
         <img src="./img/bulb-off.png" alt="bulb" class="bulb-img" id="bulb"/>
@@ -67,6 +82,9 @@
         <button class="btn-toggel btn-off" onclick="bulbToggle('Off')">Off</button>
     </div>
 
+    <a href="emotion-toggler.html" class="emotion-toggler"><h2>Emotion Toggler</h2></a>
+
+    
     <script>
         function bulbToggle(state)
         {
